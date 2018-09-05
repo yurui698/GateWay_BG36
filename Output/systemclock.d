@@ -2,7 +2,7 @@
 ..\output\systemclock.o: ..\User\systemclock.h
 ..\output\systemclock.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 ..\output\systemclock.o: ..\CMSIS\CM3\CoreSupport\core_cm3.h
-..\output\systemclock.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\systemclock.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\systemclock.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 ..\output\systemclock.o: ..\User\stm32f10x_conf.h
 ..\output\systemclock.o: ..\Libraries\inc\stm32f10x_adc.h
@@ -30,4 +30,4 @@
 ..\output\systemclock.o: ..\Libraries\inc\stm32f10x_wwdg.h
 ..\output\systemclock.o: ..\Libraries\inc\misc.h
 ..\output\systemclock.o: ..\User\HandleTask.h
-..\output\systemclock.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\systemclock.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

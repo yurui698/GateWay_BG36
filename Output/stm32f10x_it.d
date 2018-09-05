@@ -2,7 +2,7 @@
 ..\output\stm32f10x_it.o: ..\User\stm32f10x_it.h
 ..\output\stm32f10x_it.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 ..\output\stm32f10x_it.o: ..\CMSIS\CM3\CoreSupport\core_cm3.h
-..\output\stm32f10x_it.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\stm32f10x_it.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\stm32f10x_it.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 ..\output\stm32f10x_it.o: ..\User\stm32f10x_conf.h
 ..\output\stm32f10x_it.o: ..\Libraries\inc\stm32f10x_adc.h
@@ -35,4 +35,4 @@
 ..\output\stm32f10x_it.o: ..\User\si4463.h
 ..\output\stm32f10x_it.o: ..\User\radio_config_si4463.h
 ..\output\stm32f10x_it.o: ..\User\si446x_defs.h
-..\output\stm32f10x_it.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\string.h
+..\output\stm32f10x_it.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

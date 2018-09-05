@@ -2,7 +2,7 @@
 ..\output\sst25vf016b.o: ..\User\inc\SST25VF016B.H
 ..\output\sst25vf016b.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 ..\output\sst25vf016b.o: ..\CMSIS\CM3\CoreSupport\core_cm3.h
-..\output\sst25vf016b.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\sst25vf016b.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\sst25vf016b.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 ..\output\sst25vf016b.o: ..\User\stm32f10x_conf.h
 ..\output\sst25vf016b.o: ..\Libraries\inc\stm32f10x_adc.h

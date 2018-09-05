@@ -552,12 +552,13 @@ ARM Macro Assembler    Page 9
   356 0000001C                 END
               00000000 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=..\outpu
-t\startup_stm32f10x_hd.d -o..\output\startup_stm32f10x_hd.o -IE:\20180818ASCkey
-อ๘นุ\Project\RTE -ID:\software\keil512\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0 -ID:\s
-oftware\keil512\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="
-STM32F10X_HD SETA 1" --list=..\lisiting\startup_stm32f10x_hd.lst ..\Libraries\s
-tartup\startup_stm32f10x_hd.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=..\output\startup_stm32f10x_hd.d -o..\output\startup_stm32f10x_hd.
+o -I.\RTE\_Gateway -If:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Includ
+e -If:\Keil_v5\ARM\CMSIS\Include -If:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0
+ --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 524" --pre
+define="STM32F10X_HD SETA 1" --list=..\lisiting\startup_stm32f10x_hd.lst ..\Lib
+raries\startup\startup_stm32f10x_hd.s
 
 
 
@@ -1429,4 +1430,4 @@ Symbol: __main
       At line 153 in file ..\Libraries\startup\startup_stm32f10x_hd.s
 Comment: __main used once
 2 symbols
-421 symbols in table
+422 symbols in table

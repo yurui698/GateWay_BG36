@@ -26,6 +26,7 @@
 "..\output\si7021.o"
 "..\output\si4463.o"
 "..\output\password_md5.o"
+"..\output\mypid.o"
 "..\output\mqttconnectclient.o"
 "..\output\mqttconnectserver.o"
 "..\output\mqttdeserializepublish.o"
@@ -37,6 +38,6 @@
 "..\output\mqttunsubscribeclient.o"
 "..\output\mqttunsubscribeserver.o"
 --library_type=microlib --strict --scatter "..\Output\Induction Heater.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "..\Lisiting\Induction Heater.map" -o "..\Output\Induction Heater.axf"

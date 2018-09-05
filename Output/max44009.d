@@ -2,7 +2,7 @@
 ..\output\max44009.o: ..\User\max44009.h
 ..\output\max44009.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 ..\output\max44009.o: ..\CMSIS\CM3\CoreSupport\core_cm3.h
-..\output\max44009.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\max44009.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\max44009.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 ..\output\max44009.o: ..\User\stm32f10x_conf.h
 ..\output\max44009.o: ..\Libraries\inc\stm32f10x_adc.h
@@ -35,4 +35,4 @@
 ..\output\max44009.o: ..\User\radio_config_si4463.h
 ..\output\max44009.o: ..\User\si446x_defs.h
 ..\output\max44009.o: ..\User\junglesys.h
-..\output\max44009.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\math.h
+..\output\max44009.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

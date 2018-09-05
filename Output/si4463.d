@@ -2,7 +2,7 @@
 ..\output\si4463.o: ..\User\si4463.h
 ..\output\si4463.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 ..\output\si4463.o: ..\CMSIS\CM3\CoreSupport\core_cm3.h
-..\output\si4463.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\si4463.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\si4463.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 ..\output\si4463.o: ..\User\stm32f10x_conf.h
 ..\output\si4463.o: ..\Libraries\inc\stm32f10x_adc.h

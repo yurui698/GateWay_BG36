@@ -2,7 +2,7 @@
 ..\output\dataflash.o: ..\User\inc\DataFlash.h
 ..\output\dataflash.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 ..\output\dataflash.o: ..\CMSIS\CM3\CoreSupport\core_cm3.h
-..\output\dataflash.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\dataflash.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\dataflash.o: ..\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 ..\output\dataflash.o: ..\User\stm32f10x_conf.h
 ..\output\dataflash.o: ..\Libraries\inc\stm32f10x_adc.h
@@ -29,4 +29,4 @@
 ..\output\dataflash.o: ..\Libraries\inc\stm32f10x_usart.h
 ..\output\dataflash.o: ..\Libraries\inc\stm32f10x_wwdg.h
 ..\output\dataflash.o: ..\Libraries\inc\misc.h
-..\output\dataflash.o: D:\software\keil512\ARM\ARMCC\Bin\..\include\string.h
+..\output\dataflash.o: f:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
