@@ -1056,9 +1056,9 @@ void TIM2_Configuration(void)//周期1s
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2 , ENABLE);
 	TIM_DeInit(TIM2);
 
-	TIM_TimeBaseStructure.TIM_Prescaler = 7200-1;
-	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-	TIM_TimeBaseStructure.TIM_Period    = 10000-1;
+	TIM_TimeBaseStructure.TIM_Prescaler = 7200-1;  //频率为CK_CNT=TIMxCLK/(PSC+1),72M/7200=10000hz 即0.1ms
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up; //向上计数
+	TIM_TimeBaseStructure.TIM_Period    = 10000-1;  //1/CK_CLK *(ARR+1) 定时时间为1s
 	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
 	TIM_TimeBaseInit(TIM2,&TIM_TimeBaseStructure);
 

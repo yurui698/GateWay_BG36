@@ -1780,7 +1780,7 @@ static void Send_slave_cmd(void)
   		{
     		case CONTROLLERS_CMD:
  //³õÊ¼»¯Î´Íê³É »ò ·¢ËÍ×ÓÕ¾ÃüÁî³É¹¦ÊÕµ½»Ø¸´ÎŞĞè·¢ËÍ£¬Í¬Ê±¿ØÖÆÆ÷×ÓÕ¾IDĞ¡ÓÚµÈÓÚ32¸ö¡£ÏÂÃæµÄ·¢ËÍ×ÓÕ¾ÃüÁîÌø¹ı;
-          while((crtl_cmd_num[Query_Index_Controller][ctrl_j]<=0)&&(Query_Index_Controller<32)&&ctrl_j<=3)//CSH_Wired_finish==0|
+          while((crtl_cmd_num[Query_Index_Controller][ctrl_j]<=0)&&(Query_Index_Controller<32)&&ctrl_j<=3)//CSH_Wired_finish==0|ctrl_jÎª¿ØÖÆµã¸öÊı,Ã¿¸ö¿ØÖÆÆ÷4¸ö
               {	
                 ctrl_j++;								
 								if(ctrl_j>=4)
@@ -5538,7 +5538,7 @@ static u16 dword_asc_hex(u8 *dword_asc)//°Ñ4¸ö×Ö½ÚµÄASCÂë("210C")×ª»»³ÉÒ»¸ö16Î»Ê
 					if(set_slave_Index<4)
 					{
 						YX_Slave_ID=set_slave_Index+first_xiabiao_I+33;           						
-						bytelen3=WriteMultipleRegister(YX_Slave_ID,4,12,ctrlslave_param_set[set_slave_Index],ReportData3);
+						bytelen3=WriteMultipleRegister(YX_Slave_ID,4,12,ctrlslave_param_set[set_slave_Index],ReportData3);//MODBUSĞ´¶à¸ö¼Ä´æÆ÷,·µ»ØÊı×é³¤¶È
 						memcpy(USART3SendTCB,ReportData3,bytelen3);
 						WriteDataToDMA_BufferTX3(bytelen3);
 						if(ctrlslave_param_flg[set_slave_Index]>0) ctrlslave_param_flg[set_slave_Index]--;//×ÓÕ¾·¢ËÍ¼ÇÂ¼£¬Ã¿·¢ËÍÒ»´Î¼õ1£¬ÊÕµ½»Ø¸´Çå0£¬·ñÔòÖØ¸´·¢ËÍ3´Î
@@ -5572,7 +5572,7 @@ static u16 dword_asc_hex(u8 *dword_asc)//°Ñ4¸ö×Ö½ÚµÄASCÂë("210C")×ª»»³ÉÒ»¸ö16Î»Ê
 							}
 					if(set_slave_Index<8)
 					{ 
-						YX_Slave_ID=set_slave_Index+first_xiabiao_I+1;						
+						YX_Slave_ID=set_slave_Index+first_xiabiao_I+1;						//ÓĞÏß×ÓÕ¾ID
 						bytelen3=WriteMultipleRegister(YX_Slave_ID,16,18,cjqslave_param_set[set_slave_Index],ReportData3);
 						memcpy(USART3SendTCB,ReportData3,bytelen3);
 						WriteDataToDMA_BufferTX3(bytelen3);

@@ -505,11 +505,11 @@ void UART5_IRQHandler(void)
 	}   		
 }
 
-void TIM2_IRQHandler(void)
+void TIM2_IRQHandler(void) 
 {
 	if(TIM_GetITStatus(TIM2,TIM_IT_Update) != RESET)
 		{	
-			freq_I++;
+			freq_I++;   //每过1s进入中断,将freq_I++,相当于周期性记录时间
 			if(freq_I>60){freq_I=0;}
 			TIM2_FrequencyPC0[freq_I]=0;
 			TIM2_FrequencyPA0[freq_I]=0;
