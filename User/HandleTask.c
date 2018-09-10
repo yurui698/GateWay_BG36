@@ -988,7 +988,7 @@ if(close_433MHZ!=0)//不使用433MHZ通信或433MHZ通信出问题，则close_433MHZ=0;
 if(Events&WGCOLLECTOR_DATA_EVT)
 	 {
 	  wgcollector_data(); //传感器采集数据
-		Start_timerEx( WGCOLLECTOR_DATA_EVT, MEASURE_PERIOD );
+		Start_timerEx( WGCOLLECTOR_DATA_EVT, MEASURE_PERIOD ); //800ms采集一次
 	 }
 if(Events&TX5_CMD_EVT)//网关串口5采集发送命令;PC12--TX5,PD2--RX5,PD1--切换控制;AI03、BI03串口5
 	 {
@@ -1791,7 +1791,7 @@ static void Send_slave_cmd(void)
 							 }
 					if(Query_Index_Controller<32&&ctrl_j<=3)
 					{           						
-						bytelen3=WriteSingleRegister(Query_Index_Controller+33,ctrl_j,Controllers[Query_Index_Controller]+ctrl_j*2,ReportData3);
+						bytelen3=WriteSingleRegister(Query_Index_Controller+33,ctrl_j,Controllers[Query_Index_Controller]+ctrl_j*2,ReportData3);//每个点2个字节
 						memcpy(USART3SendTCB,ReportData3,bytelen3);
 						WriteDataToDMA_BufferTX3(bytelen3);
 												
@@ -1819,9 +1819,9 @@ static void Send_slave_cmd(void)
 					 }
           if(Query_Index_Collector<64)
           {						
-				  bytelen3=ReadData(Query_Index_Collector+1,READ_HOLDING_REGISTER,0x0000,0x0008,ReportData3);  
-  				memcpy(USART3SendTCB,ReportData3,bytelen3);
-					WriteDataToDMA_BufferTX3(bytelen3);
+				  bytelen3=ReadData(Query_Index_Collector+1,READ_HOLDING_REGISTER,0x0000,0x0008,ReportData3);  //数据写进ReportData3
+  				memcpy(USART3SendTCB,ReportData3,bytelen3);                                                 //拷进发送数组
+					WriteDataToDMA_BufferTX3(bytelen3);                                                           //DMA发送
 //					if(test_addr==Query_Index_Collector+1)test_send++;
           Query_Index_Collector++;
 					}						

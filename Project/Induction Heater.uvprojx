@@ -334,7 +334,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F10X_HD</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\CMSIS\CM3\CoreSupport;..\Libraries\inc;..\CMSIS\CM3\DeviceSupport\ST\STM32F10x;..\User;..\User\inc;..\MQTT;..\Output</IncludePath>
             </VariousControls>
