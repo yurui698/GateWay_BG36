@@ -323,7 +323,7 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -544,6 +544,16 @@
               <FileName>myPID.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\User\inc\myPID.h</FilePath>
+            </File>
+            <File>
+              <FileName>PIDCollector.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\PIDCollector.h</FilePath>
+            </File>
+            <File>
+              <FileName>PIDCollector.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\PIDCollector.c</FilePath>
             </File>
           </Files>
         </Group>

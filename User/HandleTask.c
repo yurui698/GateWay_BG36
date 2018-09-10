@@ -581,7 +581,7 @@ static u8 slaveID_channel_flgWX=0;//设定完成标志，收到触摸屏子站地址设定命令赋值
 //传感器采集数据定义开始
 extern __IO uint16_t ADC_ConvertedValue[];
 static void wgcollector_data(void);  //传感器采集数据
-static u8  ReadDataCNT = 0;
+ u8  ReadDataCNT = 0;
 static u8  TD_param_num=0;
 __attribute__((section("NO_INIT"),zero_init)) static u8  wgcollector_data_buff[16];
 static void startadc(void);
@@ -1038,7 +1038,7 @@ static u8  WriteMultipleRegister(u8 Slave_ID,u16 addr,u16 num,u8 *pData,u8 *temp
 	return (9+num*2);
 }
 
-static u8  WriteSingleRegister(u8 Slave_ID,u16 addr,u8 *pData,u8 *temp)
+ u8  WriteSingleRegister(u8 Slave_ID,u16 addr,u8 *pData,u8 *temp)
 	//WriteSingleRegister(Query_Index_Controller+33,ctrl_j,Controllers[Query_Index_Controller]+ctrl_j*2,ReportData3);
 {	
 	temp[0] = Slave_ID;
@@ -1053,7 +1053,7 @@ static u8  WriteSingleRegister(u8 Slave_ID,u16 addr,u8 *pData,u8 *temp)
 	temp[7] = (wm_CRC_Val&0xFF00)>>8;
 	return (8);
 }
-static u8 ReadData(u8 Slave_ID,u8 function_code,u16 addr,u16 num,u8 *temp)
+ u8 ReadData(u8 Slave_ID,u8 function_code,u16 addr,u16 num,u8 *temp)
 {
 //	u16 CRC_Val;
 
