@@ -14,6 +14,7 @@
 #include "SI7021.h"
 #include "max44009.h"
 #include "password_MD5.h"
+#include "PIDCollector.h"
 
 /* 2017年4月全网关硬件说明：
 USART2：PD3~PD7(Remap);CDMA或GSM
@@ -988,6 +989,7 @@ if(close_433MHZ!=0)//不使用433MHZ通信或433MHZ通信出问题，则close_433MHZ=0;
 if(Events&WGCOLLECTOR_DATA_EVT)
 	 {
 	  wgcollector_data(); //传感器采集数据
+		pidcollector_data(); //pid数据发送
 		Start_timerEx( WGCOLLECTOR_DATA_EVT, MEASURE_PERIOD ); //800ms采集一次
 	 }
 if(Events&TX5_CMD_EVT)//网关串口5采集发送命令;PC12--TX5,PD2--RX5,PD1--切换控制;AI03、BI03串口5
@@ -5060,7 +5062,7 @@ static void handlecmd(u8 *reply_xiafa_cmd,u16 len)
 2300H-24FCH为4个通道的限流参数；暂时不配置（本软件无此功能）
 2500H-25FCH为64个单自控回路；2600H-2620H为9个批量自控回路。
 */
-static void set_ctrl_data(u8 *_addr,u8 *_data,u8 len)		//len==2
+static void set_ctrl_data(u8 *_addr,u8 *_data,u8 len)		//len==2 set_ctrl_data(reply_xiafa_cmd+20,reply_xiafa_cmd+22,2);给控制器发送数据的数组进行设置       
 {
 	u16 PT_address,dis=0, rnd=0,rem=0;//2100H~22FCH平台控制命令
   PT_address=_addr[0]+((u16)_addr[1]<<8);
